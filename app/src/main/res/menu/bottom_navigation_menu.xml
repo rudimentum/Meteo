@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/today"
+        android:enabled="true"
+        android:icon="@drawable/ic_today"
+        android:title="@string/today_button"/>
+    <item
+        android:id="@+id/week"
+        android:enabled="true"
+        android:icon="@drawable/ic_week"
+        android:title="@string/week_button"/>
+</menu>
