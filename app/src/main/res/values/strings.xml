@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Meteo</string>
+    <string name="today_button">Today</string>
+    <string name="week_button">Week</string>
+    <string name="settings_button">Settings</string>
+    <string name="search_button">Search</string>
+    <string name="toolbar_title">Weather Today</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
