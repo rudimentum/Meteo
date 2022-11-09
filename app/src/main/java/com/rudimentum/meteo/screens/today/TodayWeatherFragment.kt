@@ -11,7 +11,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.rudimentum.meteo.databinding.FragmentTodayBinding
 import com.rudimentum.meteo.utils.isPermissionGranted
 
-class TodayFragment : Fragment() {
+class TodayWeatherFragment : Fragment() {
 
     private lateinit var permissionLauncher: ActivityResultLauncher<String>
 
