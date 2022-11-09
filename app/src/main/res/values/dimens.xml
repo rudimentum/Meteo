@@ -6,4 +6,5 @@
     <dimen name="app_padding">5dp</dimen>
     <dimen name="app_standard_text">26sp</dimen>
     <dimen name="app_large_text">48sp</dimen>
+    <dimen name="app_small_text">14sp</dimen>
 </resources>

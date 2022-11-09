@@ -2,11 +2,12 @@
     <string name="app_name">Meteo</string>
     <string name="today_button">Today</string>
     <string name="week_button">Week</string>
-    <string name="settings_button">Settings</string>
+    <string name="sync_button">Synchronize</string>
     <string name="search_button">Search</string>
-    <string name="toolbar_title">Weather Today</string>
     <string name="temperature">Temperature</string>
     <string name="city">City</string>
     <string name="error">Error</string>
     <string name="image_desc">icon</string>
+    <string name="min_temp">Min:</string>
+    <string name="max_temp">Max:</string>
 </resources>
