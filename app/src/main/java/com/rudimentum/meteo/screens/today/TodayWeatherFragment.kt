@@ -12,16 +12,12 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
-import androidx.core.view.MenuHost
-import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
 import com.google.android.gms.tasks.CancellationTokenSource
-import com.rudimentum.meteo.R
 import com.rudimentum.meteo.databinding.FragmentTodayBinding
 import com.rudimentum.meteo.models.Weather
 import com.rudimentum.meteo.repository.WeatherRepository
@@ -131,7 +127,7 @@ class TodayWeatherFragment : Fragment() {
         locationClient
             .getCurrentLocation(Priority.PRIORITY_HIGH_ACCURACY, ct.token)
             .addOnCompleteListener {
-                Q = ("${it.result.latitude},${it.result.longitude}")
+                CITY_NAME = ("${it.result.latitude},${it.result.longitude}")
             }
     }
 

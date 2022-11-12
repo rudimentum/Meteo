@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.text.InputType
 import android.widget.EditText
-import com.rudimentum.meteo.utils.Q
+import com.rudimentum.meteo.utils.CITY_NAME
 
 object DialogManager {
     fun locationSettingDialog(context: Context, listener: Listener) {
@@ -41,7 +41,7 @@ object DialogManager {
         // Set up the buttons
         builder.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
             // Here you get input text from the Edittext
-            Q = input.text.toString()
+            CITY_NAME = input.text.toString()
         })
         builder.setNegativeButton("CANCEL", DialogInterface.OnClickListener { dialog, which -> dialog.cancel() })
         builder.show()
