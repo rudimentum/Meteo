@@ -11,28 +11,73 @@
         android:id="@+id/currentCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_location"
         android:textSize="@dimen/app_standard_text"
         app:layout_constraintBottom_toTopOf="@id/currentTemperature"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UseCompatTextViewDrawableXml" />
+
+    <ImageView
+        android:id="@+id/temperatureIcon"
+        android:layout_width="36dp"
+        android:layout_height="74dp"
+        android:padding="@dimen/app_padding"
+        android:src="@drawable/ic_temperature"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/currentTemperature"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/currentTemperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/app_large_text"
         android:padding="@dimen/app_padding"
+        android:textSize="@dimen/app_large_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="top"
+        android:padding="@dimen/app_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentTemperature">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_drop"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/currentHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:padding="@dimen/app_padding"
+            android:textSize="@dimen/app_standard_text" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_percent"
+            android:padding="@dimen/app_padding"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/dayWeatherIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/app_margin"
-        android:contentDescription="@string/image_desc"
+        tools:ignore="ContentDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/currentTemperature" />
