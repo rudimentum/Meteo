@@ -37,7 +37,7 @@ class WeekForecastAdapter(): RecyclerView.Adapter<WeekForecastAdapter.MainHolder
         holder.dayMinTemperature.text = forecast.day.mintemp_c.toString()
         holder.dayMaxTemperature.text = forecast.day.maxtemp_c.toString()
         holder.dayDate.text = forecast.date
-        picasso.load(forecast.day.condition.icon).into(holder.dayWeatherIcon)
+        picasso.load("https:${forecast.day.condition.icon}").into(holder.dayWeatherIcon)
     }
 
     override fun getItemCount(): Int = daysList.size

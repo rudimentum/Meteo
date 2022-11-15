@@ -78,7 +78,7 @@ class TodayWeatherFragment : Fragment() {
         val data = response?.body()!!
         binding.currentCity.text = data.location.name
         binding.currentTemperature.text = data.current.temp_c.toString()
-        picasso.load(data.current.condition.icon).into(binding.dayWeatherIcon)
+        picasso.load("https:${data.current.condition.icon}").into(binding.dayWeatherIcon)
     }
 
     private fun permissionListener() {
