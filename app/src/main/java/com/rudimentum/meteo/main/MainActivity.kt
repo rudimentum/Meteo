@@ -1,11 +1,10 @@
-package com.rudimentum.meteo
+package com.rudimentum.meteo.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import androidx.appcompat.widget.SearchView
-import androidx.appcompat.widget.Toolbar
+import androidx.activity.viewModels
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.rudimentum.meteo.R
 import com.rudimentum.meteo.databinding.ActivityMainBinding
 import com.rudimentum.meteo.screens.today.TodayWeatherFragment
 import com.rudimentum.meteo.screens.week.WeekForecastFragment
@@ -14,9 +13,15 @@ class MainActivity : AppCompatActivity() {
 
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
+    private val viewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen().apply {
+            setKeepOnScreenCondition {
+                viewModel.isLoading.value
+            }
+        }
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
